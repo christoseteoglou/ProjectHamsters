@@ -14,7 +14,9 @@ const losers = require('./losers.js');
 
 const PORT = process.env.PORT || 2021;
 
-const staticFolder = path.join(__dirname, 'frontend');
+//const staticFolder = path.join(__dirname, 'frontend');
+const buildFolder = path.join(__dirname, '../build');
+//const imageFolder = path.join(__dirname, './img');
 
 // Terminal Logger (for tracking incoming requests)
 app.use((req, res, next) => {
@@ -24,7 +26,9 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static(staticFolder));
+app.use(express.static(buildFolder));
+app.use("./img", express.static(imageFolder));
+//app.use(express.static(staticFolder));
 
 // Routes
 app.get('/', (req, res) => {
@@ -37,6 +41,9 @@ app.use('/matches', matches);
 app.use('/matchWinners', matchWinners);
 app.use('/winners', winners);
 app.use('/losers', losers);
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "../build/index.html"))
+})
 
 // Starting the server
 app.listen(PORT, () => {
