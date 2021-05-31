@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(cors());
 app.use(express.static(buildFolder));
-app.use("./img", express.static(imageFolder));
+app.use("/img", express.static(imageFolder));
 //app.use(express.static(staticFolder));
 
 // Routes

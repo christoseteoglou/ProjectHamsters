@@ -10,7 +10,7 @@ function Cards() {
 				<div className="cards__wrapper">
 					<ul className="cards__items">
 						<CardItem
-							src={`/img/img-1.jpg`}
+							src='./img/img-1.jpg'
 							text='Explore similar EPIC fights as this one'
 							label='Adventure'
 							path="/gallery"
