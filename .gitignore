@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/AccountKey.json
+AccountKey.json
 /.pnp
 .pnp.js
 
