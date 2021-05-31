@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 2021;
 
 //const staticFolder = path.join(__dirname, 'frontend');
 const buildFolder = path.join(__dirname, '../build');
-//const imageFolder = path.join(__dirname, './img');
+const imageFolder = path.join(__dirname, './img');
 
 // Terminal Logger (for tracking incoming requests)
 app.use((req, res, next) => {

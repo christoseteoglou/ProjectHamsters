@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button } from './Buttons';
 import { Link } from 'react-router-dom'
 import './Navbar.css'
@@ -12,11 +12,15 @@ function NavBar() {
 
 	const showButton = () => {
 		if (window.innerWidth <= 960) {
-			setButton(false)
+			setButton(false);
 		} else {
-			setButton(true)
+			setButton(true);
 		}
-	}
+	};
+
+	useEffect(() => {
+		showButton();
+	}, []);
 
 	window.addEventListener('resize', showButton)
 
@@ -24,7 +28,7 @@ function NavBar() {
 		<>
 			<nav className="navbar">
 				<div className="navbar-container">
-					<Link to="/" className="navbar-logo">
+					<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
 						HMSTRS
 					</Link>
 					<div className="menu-icon" onClick={handleClick}>
