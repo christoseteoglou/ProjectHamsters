@@ -17,9 +17,29 @@ function Cards() {
 						/>
 						<CardItem
 							src='./img/img-2.jpg'
-							text='Past winners!'
-							label='Luxury'
+							text='See past victories!'
+							label='Past Winners'
+							path="/statistics"
+						/>
+					</ul>
+					<ul className="cards__items">
+						<CardItem
+							src='./img/img-3.jpg'
+							text='Explore similar EPIC fights as this one'
+							label='Adventure'
 							path="/gallery"
+						/>
+						<CardItem
+							src='./img/img-7.jpg'
+							text='See past victories!'
+							label='Past Winners'
+							path="/statistics"
+						/>
+						<CardItem
+							src='./img/img-8.jpg'
+							text='See past victories!'
+							label='Past Winners'
+							path="/statistics"
 						/>
 					</ul>
 				</div>
